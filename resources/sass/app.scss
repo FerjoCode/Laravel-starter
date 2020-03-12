@@ -1,0 +1,19 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display:700,900=swap');
+
+// Variables
+@import './partials/variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Custom partials
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+@import './partials/header';
+@import './partials/featured';
+@import './partials/main-content';
+@import './partials/footer';

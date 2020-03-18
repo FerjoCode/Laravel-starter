@@ -14,9 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('blogHome');
 });
 
-Route::get('/my-page', function () {
-    return view('layouts.blogLayout');
+Route::prefix('blog')->group(function() {
+    Route::get('/', function () {
+        return view('blogHome');
+    });
+
+    Route::get('/single-post', function () {
+        return view('single');
+    });
+
+    Route::get('/category', function() {
+        return view('category');
+    });
 });

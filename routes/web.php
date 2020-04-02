@@ -22,9 +22,7 @@ Route::prefix('blog')->group(function() {
         return view('blogHome');
     });
 
-    Route::get('/single-post', function () {
-        return view('single');
-    });
+    Route::get('/post/{slug}', 'PostController@show');
 
     Route::get('/category', function() {
         return view('category');
